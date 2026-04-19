@@ -1,0 +1,339 @@
+* {
+  padding: 0px;
+  margin: 0px;
+font-family: "Pacifico", cursive;
+}
+
+
+.logo {
+  width: 250px;
+  height: 70px;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 80px;
+  background-image: url("https://i.pinimg.com/originals/6a/85/6e/6a856e0c5141e1ba56cf78961de76146.gif");
+ font-family: "Rubik Iso", system-ui;
+}
+.nav {
+  color: white;
+  display: flex;
+  justifly-content: space-between;
+  gap: 30px;
+  list-style-type: none;
+  align-items: center;
+}
+.nav-item {
+  position: relative;
+  background-color: #9d69d6;
+  padding: 10px;
+  cursor: pointer;
+}
+.nav-item:after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: #200772;
+  transition: width 0.3s ease;
+}
+.nav-item:hover::after {
+  width: 100%;
+}
+.nav-item:hover: {
+  background-color: #380470;
+  transition: background-color 0.9s ease;
+}
+.section_1 {
+  display: flex;
+  justifly-content: space-between;
+  padding: 24px;
+  gap: 20px;
+  align-items: center;
+}
+
+.section_2 {
+  display: flex;
+  justifly-content: space-between;
+  padding: 24px;
+  gap: 20px;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+.image {
+  width: 50%;
+}
+.text {
+  font-size: 20px;
+  background-image: linear-gradient(-30deg, #463181, #8f6ad1);
+  border-radius: 5px;
+  padding: 5px;
+}
+.timer {
+  display: flex;
+  padding: 24px;
+}
+
+.section_3 {
+  display: flex;
+  background-image: linear-gradient(-30deg, #463181, #8f6ad1);
+  justify-content: space-between;
+  align-items: center;
+}
+.content{
+  padding: 10px;
+   background-image: linear-gradient(-30deg, #463181, #8f6ad1);
+  text-align: center;
+}
+.photo{
+  width:300px;
+}
+.section_4 {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+.footer{
+  background-color:#a168f9;
+  padding: 20px;
+  text-align: center;
+  color: #343474;
+  list-style-type: none;
+  
+}
+
+
+.menu{
+  position: absolute;
+  width: 100vw;
+  height: 100vw;
+ background-image: linear-gradient(-30deg, #463181, #8f6ad1);
+  top: 0;
+  left: 0;
+  color: black;
+  display: none;
+}
+
+.active{
+  display: block;
+}
+.burger{
+  position: absolute;
+  top; 15;
+  right: 15px;
+  z-index: 100;
+}
+.menu-items{
+  display:flex;
+  flex-direction:column;
+  gap: 16px;
+  margin: 0 auto;
+}
+.menu-item{
+  background-color:white;
+  padding: 16px;
+  width: 100px;
+  height: 20px;
+  align-item: center;
+ justifu-content:center;
+  text-align:center;
+  border-radius; 20px;
+}
+
+
+/* Основной контейнер */
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Скрываем радио-кнопки */
+input[type="radio"] {
+    display: none;
+}
+
+/* Контейнер слайдов: flex-контейнер */
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+/* Каждый слайд занимает 100% ширины */
+.slide {
+    flex: 0 0 100%;
+    position: relative;
+}
+
+/* Изображения растягиваются по ширине */
+.slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Стили для навигационных точек */
+.controls label {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: gray;
+    margin: 5px;
+    cursor: pointer;
+}
+
+/* Переключение слайдов */
+#slide1:checked ~ .slides { transform: translateX(0%); }
+#slide2:checked ~ .slides { transform: translateX(-100%); }
+#slide3:checked ~ .slides { transform: translateX(-200%); }
+#slide4:checked ~ .slides { transform: translateX(-300%); }
+#slide5:checked ~ .slides { transform: translateX(-400%); }
+
+/* Активная точка (выделяется при выборе) */
+input:checked + label {
+    background: black;
+}
+/* Стилизация заголовка */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+ 
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.logo {
+  height: 60px;
+  border-radius: 8px;
+}
+
+.nav {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-item {
+  padding: 12px 24px;
+  border-radius: 16px;
+  transition: all 0.3s;
+  cursor: pointer;
+  color: #333;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+.nav-item:hover {
+  background: rgba(255, 192, 203, 0.5); /* Светло-розовый */
+  transform: scale(1.03);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+
+
+/* Скрытое меню (бургер) */
+.menu {
+  display: none; /* По умолчанию скрыто */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: #FFF0F5; /* Бледно-розовый */
+  z-index: 1000;
+}
+
+.menu-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.menu-items {
+  list-style: none;
+  padding: 0;
+}
+
+.menu-item {
+  padding: 14px;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  cursor: pointer;
+  text-align: center;
+  transition: background 0.3s;
+}
+/* Базовый стиль футера */
+.footer {
+  background-color: #6C3483; /* Тёмно-фиолетовый фон */
+  padding: 2rem 0;
+  text-align: center;
+  color: white;
+}
+
+.footer-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.footer-menu > li {
+  position: relative; /* Для размещения подменю */
+  cursor: pointer;
+}
+
+.footer-menu a {
+  display: block;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+ background-image: url("https://i.pinimg.com/originals/6a/85/6e/6a856e0c5141e1ba56cf78961de76146.gif");
+}
+  color: white;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.footer-menu a:hover {
+  background: #8A2BE2; /* Насыщенный фиолетовый */
+}
+
+/* Стили для подменю */
+.submenu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px); /* Смещение вниз */
+  min-width: 150px;
+  background: #6C3483;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s, opacity 0.3s;
+  list-style: none;
+  margin: 0;
+  padding: 0.5rem 0;
+}
+
+.footer-menu > li:hover .submenu {
+  opacity: 1;
+  max-height: 300px; /* Максимальная высота для плавного раскрытия */
+}
+
+.submenu li {
+  margin: 0.5rem 0;
+}
+
+.submenu a {
+  padding: 0.7rem 1.5rem;
+  white-space: nowrap;
+}
+
+
+
